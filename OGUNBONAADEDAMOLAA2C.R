@@ -73,13 +73,13 @@ plot(Daphniacluster)
 D_complete_16S <- Daphniacluster_comp %>%
   as.dendrogram %>% #converting cluster to a dendrogram
   set("branches_k_color", k=11)  #setting color based on clusters for branches
-plot(D_complete_16S)
+plot(D_complete_16S, main = "Daphnia 16S Phylogenetic Tree", xlab = "Complete Linkage Clustering")
 
 #Creating a dendrogram using 16S MSA derived distance matrix (single-linkage)
 D_single_16S <- Daphniacluster_single %>%
   as.dendrogram %>% #converting cluster to a dendrogram
   set("branches_k_color", k=11)  #setting color based on clusters for branches
-plot(D_single_16S)
+plot(D_single_16S, main = "Daphnia 16S Phylogenetic Tree", xlab = "Single Linkage Clustering")
 
 
 #Only one gene data set was used. Instead of comparing phylogenetic hypothesis of two genes, the single data set can simply be used to compare the phylogenetic hypothesis of two clustering algorithms.
